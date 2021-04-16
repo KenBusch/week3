@@ -35,32 +35,55 @@ document.addEventListener('DOMContentLoaded', async function() {
   // Figure out how promotions there are, and store that number in memory
 
   // Write the number of products to the JavaScript console
-
+  console.log(`there are ${data.products.length} products`)
   // Write the number of promotions to the JavaScript console
-
+  console.log(`there are ${data.promotions.length} promotions`)
   // PART 2
   // Store the first product in memory
+  let product1 = data.products[0]
 
   // Write the first product to the JavaScript console, on three separate lines
-
+console.log(product1.name)
+console.log(product1.price)
+console.log(product1.description)
   // Repeat for the 2nd and 3rd products
   // Store the second product in memory
-
+  let product2 = data.products[1]
+  let product3 = data.products[2]
   // Write the product to the JavaScript console, on three separate lines
-  
+console.log(product2.name)
+console.log(product2.price)
+console.log(product2.description)
   // Store the third product in memory
-
+  console.log(product3.name)
+  console.log(product3.price)
+  console.log(product3.description)
   // Write the product to the JavaScript console, on three separate lines
 
   // PART 3
   // Get a random integer between 1 and 10
-
+let randomNumber = getRandomInt (10)
   // Subtract one from that random integer because Arrays are zero-based
+randomNumber = randomNumber-1
 
   // Use the random integer to grab a promotion from the Array of promotions
   // and store it in memory
   
+  let randomPromo = data.promotions[randomNumber]
+
+  console.log(randomPromo)
   // Figure out which emoji should be displayed, store it in memory (you will need
+
+  let emoji
+
+  if (randomPromo.type == `discount`) {
+    emoji = `🤑`
+  } else if (randomPromo.type == `shipping`) {
+    emoji = `🚛`
+  } else {
+    emoji = `🏆`
+  }
+  console.log (`Your promo is ${randomPromo.description} ${emoji}`)
   // an empty variable for this before you write any conditional)
 
   // Create a sentence that displays the emoji along with the description 
